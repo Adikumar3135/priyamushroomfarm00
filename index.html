@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags for Charset and Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Priya Mushroom Farm</title>
+    
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    /* === Global Reset and Base Styles === */
+* {
+    font-family: serif;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+body {
+    background-color: #e6f8e6; /* Light green background for organic feel */
+    color: #333; /* Dark gray text for readability */
+}
+
+/* === Hero Section Styles === */
+.container {
+    background-image: url('background1.jpg'); /* Hero background image */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Hero Title */
+.title {
+    margin-top: 50%;
+    font-weight: bolder;
+    color: #a3f467; /* Light green */
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 1rem;
+    font-size: 60px;
+}
+
+/* Hero Subtitle */
+.sub-title {
+    margin-top: 50%;
+    align-self: center;
+    position: absolute;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* === Navigation Bar === */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(0, 0, 0); /* Black navbar background */
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(255, 244, 244); /* Off-white text */
+}
+
+/* === About Section === */
+.about {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Image in About Section */
+#photo {
+    width: 300px;
+    height: 480px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px rgb(220, 245, 35), -5px -5px 10px rgb(240, 254, 44); /* Dual glow */
+    margin-left: 20px;
+}
+
+/* === Product Section === */
+.product {
+    background-color: white;
+}
+
+/* Container for Product Section */
+#product {
+    background-color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Product Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Product List Layout */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Single Product Card */
+.product {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    border: 2px solid rgba(224, 222, 222, 0.714);
+    box-shadow: 5px 5px 10px rgba(212, 211, 211, 0.744);
+}
+
+/* Hover effect for products */
+.product:hover {
+    box-shadow: 5px 5px 10px rgb(92, 92, 92);
+}
+
+/* Product price text */
+.product .price {
+    color: green;
+}
+
+/* Product Image */
+.product img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* === Gallery Images (if any) === */
+#gallery img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* === Recipe Section === */
+#recipe {
+    background-color: #e8f5e9; /* Very light green */
+    padding: 40px 20px;
+}
+
+/* Layout for Recipe Cards */
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Single Recipe Card */
+.recipe-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+}
+
+/* Recipe Image */
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Recipe Title */
+.recipe-card h3 {
+    margin-top: 10px;
+    color: #388e3c; /* Dark green */
+}
+
+/* Recipe Description */
+.recipe-card p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* === Footer Section === */
+footer {
+    border-top: 5px solid rgb(22, 215, 229); /* Top border style */
+    margin-top: 10px;
+    background-color: rgb(7, 7, 105); /* Dark navy blue */
+    text-align: center;
+    padding: 15px;
+    line-height: 1;
+}
+
+/* Footer Title */
+footer h3 {
+    color: rgb(13, 213, 166); /* Aqua green */
+    font-size: 30px;
+}
+
+/* Footer Text */
+footer p {
+    font-size: 15px;
+    color: white;
+}
+
+/* Footer Links */
+footer p a {
+    color: rgb(19, 19, 251); /* Bright blue */
+    text-decoration: none;
+}
+
+/* === Responsive Media Queries === */
+
+/* For tablets and medium screens */
+@media (min-width: 700px) {
+    .title {
+        margin-top: 20%;
+        margin-bottom: 1rem;
+        font-size: 80px;
+    }
+
+    .sub-title {
+        margin-top: 70px;
+        font-size: 30px;
+    }
+
+    .navbar {
+        font-weight: 800;
+    }
+
+    #photo {
+        margin-left: 50px;
+    }
+}
+
+/* For large screens / desktops */
+@media (min-width: 1000px) {
+    .about {
+        width: 60%;
+        display: grid;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 500;
+        font-style: italic;
+    }
+
+    .photo {
+        position: absolute;
+        display: flex;
+        right: 30px;
+        justify-self: end;
+    }
+}
+
+</style>
+<body>
+    <!-- Hero Section: Farm Name & Tagline -->
+    <div class="container">
+        <h3 class="title">Priya Mushroom Farm</h3>
+        <p class="sub-title">Fresh, Organic & Sustainably Grown Mushrooms</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#products">Product</a>
+        <a href="#recipe">Recipe</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- About Section -->
+    <div class="about" id="about">
+        <p class="about-p"><b>Welcome to Priya Mushroom Farm.</b></p>
+        <p>Your one-stop destination for everything related to mushroom farming.</p>
+        <p class="about-p">We offer all types of fresh and organic mushrooms, including oyster, button, milky, and shiitake.</p>
+        <p class="about-p">Whether you're a home grower or a commercial farmer, we provide everything you need to grow mushrooms successfully.</p>
+        <p class="about-p">From high-quality mushroom seeds (spawn) to growing kits, compost, and humidity control tools, we've got you covered.</p>
+        <p class="about-p">Our products are carefully selected to ensure high yield and superior quality.</p>
+        <p class="about-p">We also offer training and guidance for beginners in mushroom cultivation.</p>
+        <p class="about-p">We aim to support farmers and entrepreneurs by making mushroom farming easier and more profitable.</p>
+        <p class="about-p">Visit us today and take the first step toward a sustainable and rewarding farming journey.</p>
+        <p class="about-p"><b>Grow healthy. Grow naturally. Grow with us.</b></p>
+        
+        <!-- Owner Photo -->
+        <div class="photo">
+            <img src="Priya.jpg" alt="Owner Priya Devi" id="photo">
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="oyster-mushrrom.jpg" alt="Oyster Mushroom">
+                <h3>Oyster Mushrooms</h3>
+                <p class="price">Price Upto ₹200</p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="button-mushroom.jpg" alt="Button Mushroom">
+                <h3>Button Mushrooms</h3>
+                <p class="price">Price Upto ₹250</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="millky-mushroom.webp" alt="Milky Mushroom">
+                <h3>Milky Mushrooms</h3>
+                <p class="price">Price Upto ₹300</p>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="dry-mushroom.jpg" alt="Dry Mushroom">
+                <h3>Dry Mushrooms</h3>
+                <p class="price">Price Upto ₹1000</p>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product">
+                <img src="seed.jpg" alt="Mushroom Seeds">
+                <h3>Mushroom Seeds</h3>
+                <p class="mushroom-seeds">All types of Mushroom-seeds.</p>
+                <p class="price">Price Upto ₹150</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Section -->
+    <section id="recipe">
+        <h2>Mushroom Recipes</h2>
+        <div class="recipe-list">
+            <!-- Recipe 1 -->
+            <div class="recipe-card">
+                <img src="mushroom-curry.jpg" alt="Mushroom Curry" />
+                <h3>Mushroom Masala Curry</h3>
+                <p>A spicy and creamy mushroom curry made with fresh tomatoes, garlic, and onions.</p>
+            </div>
+
+            <!-- Recipe 2 -->
+            <div class="recipe-card">
+                <img src="grilled-mushroom.jpg" alt="Grilled Mushrooms" />
+                <h3>Grilled Garlic Mushrooms</h3>
+                <p>Oyster mushrooms grilled with butter, garlic and herbs — perfect as a starter!</p>
+            </div>
+
+            <!-- Recipe 3 -->
+            <div class="recipe-card">
+                <img src="mushroom-soup.jpg" alt="Mushroom Soup" />
+                <h3>Milky Mushroom Soup</h3>
+                <p>A healthy soup made from milky mushrooms, perfect for boosting immunity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact">
+        <h3>Priya Mushroom Farm</h3>
+        <p>Name: Priya Devi</p>
+        <!-- Corrected email link -->
+        <p>Email: <a href="mailto:priyabinodkr01@gmail.com">priyabinodkr01@gmail.com</a></p>
+        <!-- Clickable phone number -->
+        <p>Phone: <a href="tel:+917061433010">+91 7061433010</a></p>
+        <p>Address: Kalgiganj, Kahalgaon (813203), Bhagalpur, Bihar, India</p>
+        <p>&copy; Priya Mushroom Farm. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Alert on Page Load -->
+    <script>
+        alert("Welcome To Priya Mushroom Farm");
+    </script>
+</body>
+</html>
